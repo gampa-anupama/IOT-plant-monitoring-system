@@ -40,7 +40,6 @@ BlynkSimpleEsp8266
 DHT
 
 
-
 ---
 
 ## Getting Started  
@@ -78,7 +77,7 @@ Replace placeholders with your actual Wi-Fi credentials in the code:
 char auth[] = "YourAuthToken";
 char ssid[] = "YourWiFiSSID";
 char pass[] = "YourWiFiPassword";
-
+---
 ## 5. Upload the Code  
 Upload the provided code to the **ESP8266 NodeMCU** using the **Arduino IDE**.  
 
