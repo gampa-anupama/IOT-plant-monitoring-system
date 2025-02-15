@@ -79,50 +79,73 @@ char auth[] = "YourAuthToken";
 char ssid[] = "YourWiFiSSID";
 char pass[] = "YourWiFiPassword";
 
-5. Upload the Code
-Upload the provided code to the ESP8266 NodeMCU using the Arduino IDE.
+## 5. Upload the Code  
+Upload the provided code to the **ESP8266 NodeMCU** using the **Arduino IDE**.  
 
-6. Power On
-Power the ESP8266 and monitor the system via the LCD display and Blynk app.
+## 6. Power On  
+Power the **ESP8266** and monitor the system via the **LCD display** and **Blynk app**.  
 
-Code Explanation
-Libraries and Initial Setup
-The project uses the following libraries:
+---
 
-LiquidCrystal_I2C for LCD control
-ESP8266WiFi and BlynkSimpleEsp8266 for Wi-Fi and Blynk integration
-DHT for temperature and humidity readings
-Global Variables
-Wi-Fi credentials (auth, ssid, pass) for Blynk connectivity
-Sensor pins for soil moisture and PIR sensors
-States for relay and physical button
-Setup
-Initializes all components (LCD, DHT sensor, Wi-Fi)
-Sets up the Blynk connection and schedules periodic tasks for reading sensor data
-Sensor Functions
-DHT11 Sensor:
-Reads temperature and humidity values
-Sends data to the Blynk app and displays it on the LCD
-Soil Moisture Sensor:
-Maps soil moisture raw data to a percentage
-Sends moisture level to Blynk and displays it on the LCD
-PIR Sensor:
-Detects motion and logs events to Blynk
-Blynk Functions
-Syncs the PIR sensor and relay states with the app
-Updates relay state when toggled via the app
-Physical Button
-Monitors the state of the push button to toggle the relay locally
-Main Loop
-Continuously updates the LCD with sensor data
-Manages tasks through Blynk and timers
-How It Works
-Data Collection: Sensors gather data about temperature, humidity, and soil moisture.
-Real-Time Display: Sensor data is displayed on the LCD and sent to the Blynk app.
-Automation: The relay can be controlled based on sensor readings or manually through the app or push button.
-Motion Alerts: The PIR sensor detects motion and alerts the user via the Blynk app.
-Future Enhancements
-Add support for more sensors (e.g., light intensity)
-Implement advanced automation rules
-Enable data logging for long-term analysis
-Integrate with other IoT platforms
+## Code Explanation  
+
+### **Libraries and Initial Setup**  
+The project uses the following libraries:  
+- **LiquidCrystal_I2C** – LCD control  
+- **ESP8266WiFi** and **BlynkSimpleEsp8266** – Wi-Fi and Blynk integration  
+- **DHT** – Temperature and humidity readings  
+
+### **Global Variables**  
+- **Wi-Fi credentials** (`auth`, `ssid`, `pass`) for Blynk connectivity  
+- **Sensor pins** for soil moisture and PIR sensors  
+- **Relay and physical button states**  
+
+### **Setup**  
+- Initializes all components (**LCD, DHT sensor, Wi-Fi**)  
+- Sets up the **Blynk connection** and schedules periodic tasks for reading sensor data  
+
+---
+
+## Sensor Functions  
+
+### **DHT11 Sensor**  
+- Reads **temperature** and **humidity** values  
+- Sends data to the **Blynk app** and displays it on the **LCD**  
+
+### **Soil Moisture Sensor**  
+- Maps **soil moisture raw data** to a percentage  
+- Sends moisture level to **Blynk** and displays it on the **LCD**  
+
+### **PIR Sensor**  
+- Detects **motion** and logs events to **Blynk**  
+
+---
+
+## Blynk Functions  
+- **Syncs PIR sensor** and **relay states** with the app  
+- **Updates relay state** when toggled via the app  
+
+## Physical Button  
+- Monitors the state of the **push button** to toggle the relay locally  
+
+## Main Loop  
+- Continuously updates the **LCD** with sensor data  
+- Manages tasks through **Blynk** and timers  
+
+---
+
+## How It Works  
+
+1. **Data Collection** – Sensors gather data about **temperature, humidity, and soil moisture**.  
+2. **Real-Time Display** – Sensor data is displayed on the **LCD** and sent to the **Blynk app**.  
+3. **Automation** – The **relay** can be controlled based on **sensor readings** or **manually** through the app or push button.  
+4. **Motion Alerts** – The **PIR sensor** detects motion and alerts the user via the **Blynk app**.  
+
+---
+
+## Future Enhancements  
+
+- Add support for more **sensors** (e.g., light intensity)  
+- Implement **advanced automation rules**  
+- Enable **data logging** for long-term analysis  
+- Integrate with **other IoT platforms**  
