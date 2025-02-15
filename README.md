@@ -77,7 +77,10 @@ Replace placeholders with your actual Wi-Fi credentials in the code:
 char auth[] = "YourAuthToken";
 char ssid[] = "YourWiFiSSID";
 char pass[] = "YourWiFiPassword";
+```
 ---
+# ESP8266 IoT Project  
+
 ## 5. Upload the Code  
 Upload the provided code to the **ESP8266 NodeMCU** using the **Arduino IDE**.  
 
@@ -88,18 +91,18 @@ Power the **ESP8266** and monitor the system via the **LCD display** and **Blynk
 
 ## Code Explanation  
 
-### **Libraries and Initial Setup**  
+### Libraries and Initial Setup  
 The project uses the following libraries:  
 - **LiquidCrystal_I2C** – LCD control  
 - **ESP8266WiFi** and **BlynkSimpleEsp8266** – Wi-Fi and Blynk integration  
 - **DHT** – Temperature and humidity readings  
 
-### **Global Variables**  
+### Global Variables  
 - **Wi-Fi credentials** (`auth`, `ssid`, `pass`) for Blynk connectivity  
 - **Sensor pins** for soil moisture and PIR sensors  
 - **Relay and physical button states**  
 
-### **Setup**  
+### Setup  
 - Initializes all components (**LCD, DHT sensor, Wi-Fi**)  
 - Sets up the **Blynk connection** and schedules periodic tasks for reading sensor data  
 
@@ -107,22 +110,22 @@ The project uses the following libraries:
 
 ## Sensor Functions  
 
-### **DHT11 Sensor**  
+### DHT11 Sensor  
 - Reads **temperature** and **humidity** values  
 - Sends data to the **Blynk app** and displays it on the **LCD**  
 
-### **Soil Moisture Sensor**  
+### Soil Moisture Sensor  
 - Maps **soil moisture raw data** to a percentage  
 - Sends moisture level to **Blynk** and displays it on the **LCD**  
 
-### **PIR Sensor**  
+### PIR Sensor  
 - Detects **motion** and logs events to **Blynk**  
 
 ---
 
 ## Blynk Functions  
-- **Syncs PIR sensor** and **relay states** with the app  
-- **Updates relay state** when toggled via the app  
+- Syncs **PIR sensor** and **relay states** with the app  
+- Updates **relay state** when toggled via the app  
 
 ## Physical Button  
 - Monitors the state of the **push button** to toggle the relay locally  
